@@ -1,12 +1,12 @@
-# NPI Registry MCP Server
+# NPI Registry MCP Server 🏥
 
 A Model Context Protocol (MCP) server for searching the National Provider Identifier (NPI) registry. This server provides tools to search and retrieve information about healthcare providers and organizations in the United States.
 
-## Overview
+## Overview 📋
 
 NPI is a unique identification number for covered health care providers in the United States. This MCP server allows Claude and other MCP-compatible clients to search the official NPI registry maintained by the Centers for Medicare & Medicaid Services (CMS), and integrates the results into an LLM context for enhanced analysis and insights.
 
-### Features
+### Features ✨
 
 - **Search by Provider Name**: Find individual healthcare providers by first name, last name, or both
 - **Search by Organization**: Look up healthcare organizations by name
@@ -15,7 +15,7 @@ NPI is a unique identification number for covered health care providers in the U
 - **Specialty Search**: Find providers by their specialty or taxonomy description
 - **Comprehensive Data**: Returns detailed information including addresses, practice locations, specialties, and other identifiers
 
-### Use Cases
+### Use Cases 💡
 
 - Verify healthcare provider credentials
 - Find provider contact information and addresses
@@ -24,14 +24,14 @@ NPI is a unique identification number for covered health care providers in the U
 - Research provider specialties and taxonomies
 - Find providers in specific geographic areas
 
-## Installation
+## Installation 🚀
 
-### Prerequisites
+### Prerequisites 📋
 
 - Python 3.10 or higher
 - [uv](https://github.com/astral-sh/uv) package manager
 
-### Development Setup
+### Development Setup 🛠️
 
 1. **Clone the repository**:
 
@@ -61,7 +61,7 @@ NPI is a unique identification number for covered health care providers in the U
    uv run npi-registry-mcp-server
    ```
 
-### Production Installation
+### Production Installation 🌟
 
 Install from PyPI (once published):
 
@@ -75,11 +75,11 @@ Or install from source:
 uv pip install git+https://github.com/eliotk/npi-registry-mcp-server.git
 ```
 
-## Usage
+## Usage 📚
 
-### Available Tools
+### Available Tools 🛠️
 
-#### `search_npi_registry`
+#### `search_npi_registry` 🔎
 
 Search the NPI registry with various criteria:
 
@@ -114,7 +114,7 @@ search_npi_registry(specialty="cardiology", state="NY", limit=20)
 search_npi_registry(postal_code="902*", state="CA")
 ```
 
-### Response Format
+### Response Format 📄
 
 The search returns a structured response with:
 
@@ -144,19 +144,19 @@ The search returns a structured response with:
 }
 ```
 
-## Claude Desktop Configuration
+## Claude Desktop Configuration 🖥️
 
 To use this MCP server with Claude Desktop, add the following configuration to your Claude Desktop config file:
 
-### macOS
+### macOS 🍎
 
 Location: `~/Library/Application Support/Claude/claude_desktop_config.json`
 
-### Windows
+### Windows 🪟
 
 Location: `%APPDATA%/Claude/claude_desktop_config.json`
 
-### Configuration
+### Configuration 📝
 
 ```json
 {
@@ -174,16 +174,16 @@ Location: `%APPDATA%/Claude/claude_desktop_config.json`
 }
 ```
 
-### Verification
+### Verification ✅
 
 1. Save the configuration file
 2. Restart Claude Desktop completely
 3. Look for the 🔧 icon in Claude Desktop to verify the server is connected
 4. Try asking Claude: "Search for doctors named Smith in California"
 
-## Development
+## Development 👨‍💻
 
-### Project Structure
+### Project Structure 📁
 
 ```
 npi-registry-mcp-server/
@@ -197,13 +197,13 @@ npi-registry-mcp-server/
 └── .gitignore
 ```
 
-### Running Tests
+### Running Tests 🧪
 
 ```bash
 uv run pytest
 ```
 
-### Code Formatting
+### Code Formatting 🎨
 
 ```bash
 # Format code
@@ -219,13 +219,13 @@ uv run ruff check src/ tests/
 uv run mypy src/
 ```
 
-### Building the Package
+### Building the Package 📦
 
 ```bash
 uv build
 ```
 
-## API Reference
+## API Reference 📖
 
 This server uses the official NPI Registry API provided by CMS:
 
@@ -233,14 +233,14 @@ This server uses the official NPI Registry API provided by CMS:
 - **Documentation**: https://npiregistry.cms.hhs.gov/registry/help-api
 - **Rate Limits**: The API has reasonable rate limits for normal usage
 
-### Data Sources
+### Data Sources 🗃️
 
 All data comes directly from the official NPI Registry maintained by:
 
 - Centers for Medicare & Medicaid Services (CMS)
 - U.S. Department of Health and Human Services
 
-## Contributing
+## Contributing 🤝
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature-name`
@@ -249,19 +249,19 @@ All data comes directly from the official NPI Registry maintained by:
 5. Format your code: `uv run black src/ tests/`
 6. Submit a pull request
 
-## License
+## License 📄
 
 MIT License - see LICENSE file for details.
 
-## Support
+## Support 🆘
 
 - **Issues**: Report bugs and request features via GitHub Issues
 - **Documentation**: Additional documentation available in the `/docs` directory
 - **API Questions**: Refer to the official NPI Registry API documentation
 
-## Changelog
+## Changelog 📝
 
-### v0.1.0
+### v0.1.0 🎉
 
 - Initial release
 - Basic NPI registry search functionality
